@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(360_F_504782581_LHwsDbXlrFiiadWC4i15yV2lhbJnB8g0.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main {
+            background-color: gainsboro;
+            height: auto;
+            padding: 20px;
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 10px;
+
+        }
+
+        .main button:hover {
+            background-color: aliceblue;
+            cursor: pointer;
+           
+        }
+
+        #print {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <button onclick="showbutton()">Click Me</button>
+        </div>
+        <div id="print">
+            <h1>Contact Us</h1>
+            <div id="printvalues">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+            </div><br>
+            <div id="printvalues">
+                <label for="gmail">Gmail</label>
+                <input type="gmail" id="gmail">
+            </div><br>
+            <div id="printvalues">
+                <label for="address">Address</label>
+                <input type="address" id="address">
+            </div><br>
+            <button onclick="printvalues()">Submit</button>
+            <h2>Output</h2>
+            <p id="output"></p>
+
+
+        </div>
+    </div>
+    </div>
+    <script>
+        function showbutton() {
+            document.getElementById("print").style.display = "block"
+        };
+        function printvalues() {
+            let name = document.getElementById("name").value;
+            let gmail = document.getElementById("gmail").value;
+            let address = document.getElementById("address").value;
+        
+        document.getElementById("output").innerHTML=
+        "<strong>Name:</strong>" + name +
+        "<br><strong>Gmail:</strong>" + gmail +
+        "<br><strong>Address:</strong>" + address;
+        }
+    </script>
+</body>
+
+</html>
